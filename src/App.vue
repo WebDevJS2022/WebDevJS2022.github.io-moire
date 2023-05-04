@@ -3,7 +3,8 @@
 
         <ProductList :products="products"/>
 
-        <BasePagination :page="page" :count="countProducts" :per-page="productsPerPage"/>
+        <BasePagination :modelValue="page" @update:modelValue="page = $event"
+        :count="countProducts" :per-page="productsPerPage"/>
       </section>
 </template>
 
